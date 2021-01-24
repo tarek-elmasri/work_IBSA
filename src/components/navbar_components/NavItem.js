@@ -13,8 +13,8 @@ const useStyles=makeStyles(theme => ({
     color: 'black',
     zIndex: 20,
     '&:hover,&:focus': {
-      color: 'blue',
-      borderBottom: '2px solid blue'
+      color: '#1f1480',
+      borderBottom: '2px solid #1f1480'
     }
 
   },

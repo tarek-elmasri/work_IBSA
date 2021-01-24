@@ -7,7 +7,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 const useStyles=makeStyles(theme => ({
   root: {
-    marginTop: theme.spacing(.2),
+    borderBottom: '1px solid rgb(50, 40, 148)',
     background: '#1f1480',
     color: 'white',
     '&:hover,&:focus': {
