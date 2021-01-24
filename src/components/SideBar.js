@@ -1,11 +1,8 @@
-import { Box, Collapse, IconButton, List, makeStyles } from '@material-ui/core'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import HomeIcon from '@material-ui/icons/Home';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { makeStyles } from '@material-ui/core'
+import React from 'react'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ListItem from './sidebar_components/ListItem'
-import ListItemTest from './sidebar_components/CollapsedListItem';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,8 +25,6 @@ const useStyles = makeStyles(theme => ({
 
 function SideBar({toggler}) {
   const classes=useStyles();
-
-  const [subHome, setSubHome] = useState(false)
 
   return (
     <div className={classes.root}>

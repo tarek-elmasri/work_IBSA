@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Box, Button, Collapse, Divider, Drawer, Grid, Hidden, IconButton, makeStyles, Menu, Toolbar, Typography } from '@material-ui/core'
+import { AppBar, Box, Divider, Drawer, Grid, Hidden, IconButton, makeStyles, Toolbar, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import SideBar from './SideBar';
 import NavItem from './navbar_components/NavItem';
@@ -11,7 +11,6 @@ function Navbar() {
 
   const classes=useStyles();
   const [openSideMenu, setOpenSideMenu] = useState(false)
-  const [anchorEl, setAnchorEl] = useState(null);
 
   const sidebarToggler = (state) => e => {
     setOpenSideMenu(state)

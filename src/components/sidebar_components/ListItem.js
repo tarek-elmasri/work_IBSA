@@ -1,4 +1,4 @@
-import {  Box, Collapse, Divider, IconButton, ListItemIcon, ListItemText, makeStyles } from '@material-ui/core'
+import { Collapse, ListItemIcon, ListItemText, makeStyles } from '@material-ui/core'
 import React, { useState } from 'react'
 
 import { ListItem as MuiListItem } from '@material-ui/core'
