@@ -24,7 +24,7 @@ const useStyles=makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     background: '#1f1480',
-    width: 200,
+    width: 250,
     top: '109%',
     left: 0,
     borderRadius: '5px',
