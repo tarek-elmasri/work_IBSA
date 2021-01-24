@@ -110,6 +110,7 @@ const useStyles= makeStyles(theme => ({
   navListItem: {
     background: '#1f1480',
     color: 'white',
+    borderBottom: '1px solid rgb(50, 40, 148)',
     '&:hover,&:focus': {
       backgroundColor: 'rgb(50, 40, 148)'
     }

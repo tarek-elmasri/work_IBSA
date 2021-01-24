@@ -34,6 +34,9 @@ const useStyles=makeStyles(theme => ({
 
   text: {
   
+  },
+  menu: {
+    display: 'none'
   }
 }))
 
@@ -45,8 +48,8 @@ export default function NavItem({title="",children, ...others}) {
     <>
     <div className={classes.root} {...others} onMouseEnter={()=> setActive(true)} onMouseLeave={()=> setActive(false)} >
       <Typography variant='body1' className={classes.text}>{title}</Typography>
-        <Collapse in={active} timeout={1}>
-          <div className={children ? classes.menuActive : classes.menu} >
+        <Collapse in={active} timeout={1} className={children ? classes.menuActive : classes.menu} >
+          <div >
             { children  }
           </div>
         </Collapse>
