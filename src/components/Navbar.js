@@ -35,10 +35,10 @@ function Navbar() {
             </Grid>
             <Hidden mdDown>
               <Grid item>
-                <NavItem title='Home' />
+                <NavItem title='Home' href='/' />
 
                 <NavItem title='Innovation'>
-                  <ListItem button title='Research & Development' className={classes.navListItem}/>
+                  <ListItem button title='Research & Development' href={'/research'} className={classes.navListItem}/>
                   <ListItem button title='Technologies' className={classes.navListItem} />
                   <ListItem button title='Molecules' className={classes.navListItem}/>
                 </NavItem>

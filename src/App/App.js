@@ -18,9 +18,7 @@ function App() {
           <Route exact path='/research' component={Research} />
           <Route exact path='/' component={Home} />
         </Switch>
-        <div style={{background: 'gray', height: '3000px'}}>
-          
-        </div>
+        
         <CssBaseline />
       </div>
 

@@ -1,5 +1,6 @@
 import { Collapse, makeStyles, Typography } from '@material-ui/core'
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom';
 
 const useStyles=makeStyles(theme => ({
   root: {
@@ -40,20 +41,27 @@ const useStyles=makeStyles(theme => ({
   }
 }))
 
-export default function NavItem({title="",children, ...others}) {
+export default function NavItem({title="",href=null,children,onClick=()=>{}, ...others}) {
 
   const classes=useStyles();
+  const history=useHistory();
   const [active,setActive] = useState(false)
   return (
     <>
-    <div className={classes.root} {...others} onMouseEnter={()=> setActive(true)} onMouseLeave={()=> setActive(false)} >
-      <Typography variant='body1' className={classes.text}>{title}</Typography>
-        <Collapse in={active} timeout={1} className={children ? classes.menuActive : classes.menu} >
-          <div >
-            { children  }
-          </div>
-        </Collapse>
-    </div>
+      <div className={classes.root} {...others}
+        onMouseEnter={()=> setActive(true)} onMouseLeave={()=> setActive(false)}
+        onClick={()=> {
+        href && history.push(href)
+        onClick()
+        }}
+      >
+        <Typography variant='body1' className={classes.text}>{title}</Typography>
+          <Collapse in={active} timeout={250} className={children ? classes.menuActive : classes.menu} >
+            <div >
+              { children  }
+            </div>
+          </Collapse>
+      </div>
       </>
   )
 }
