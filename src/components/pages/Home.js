@@ -24,9 +24,9 @@ function Home() {
     <div>
       <div style={{position: 'relative'}}>
         <Carousel navButtonsAlwaysVisible={isMobile? false : true} >
-          <img src={img1} alt='' className={classes.carouselImg} style={{height: isMobile ? '350px' : 'auto'}} />
-          <img src={img2} alt='' className={classes.carouselImg} style={{height: isMobile ? '350px' : 'auto'}} />
-          <img src={img3} alt='' className={classes.carouselImg} style={{height: isMobile ? '350px' : 'auto'}} />
+          <img src={img1} alt='' className={classes.carouselImg} />
+          <img src={img2} alt='' className={classes.carouselImg} />
+          <img src={img3} alt='' className={classes.carouselImg} />
         </Carousel>
       </div>
       <div>
