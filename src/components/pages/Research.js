@@ -2,7 +2,7 @@ import React from 'react'
 
 function Research() {
   return (
-    <div>
+    <div style={{height: 700}}>
       Research Page
     </div>
   )

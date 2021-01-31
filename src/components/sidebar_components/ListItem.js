@@ -33,7 +33,7 @@ function ListItem({ icon=null, title="", expanded=false,navbar=false,onClick=()=
     <div>
         <MuiListItem className={classes.root} onClick={()=>{
           setExpandState(!expandState);
-          href && history.push(href)
+          href && history.push(href);
           onClick();
           }}
           {...others}

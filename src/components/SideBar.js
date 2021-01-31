@@ -27,13 +27,11 @@ function SideBar({toggler}) {
   const classes=useStyles();
 
   return (
-    <div className={classes.root}>
-      <ListItem button title={<ArrowBackIcon fontSize='small' />}
-        onClick={toggler(false)}
-      />
-      <ListItem button title='Home' />
+    <div className={classes.root} onClick={toggler(false)}>
+      <ListItem button title={<ArrowBackIcon fontSize='small' />} />
+      <ListItem button title='Home' href='/' />
       <ListItem button title='People' />
-      <ListItem button title='Innovation' />
+      <ListItem button title='Innovation' href='/research' />
       <ListItem button title='Quality' />
       <ListItem button title='Reponsibility' />
       <ListItem button title='PharmacoVigilance' />

@@ -70,9 +70,9 @@ function Navbar() {
 
               <Grid item>
                 <Box className={classes.lang}>
-                  <Typography variant='body1' style={{paddingRight: 20, paddingLeft: 20}}>En</Typography>
+                  <Typography variant='body1' className={classes.langTypo} style={{paddingRight: 20, paddingLeft: 20 } }>En</Typography>
                   <Divider orientation='vertical' flexItem={true} style={{background: 'black'}} />
-                  <Typography variant='body2' style={{paddingLeft: 20}}>العربية</Typography>
+                  <Typography variant='body2' className={classes.langTypo} style={{paddingLeft: 20}}>العربية</Typography>
                 </Box>
               </Grid>
               
@@ -107,6 +107,13 @@ const useStyles= makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     color: 'black'
+  },
+  langTypo: {
+    cursor: 'pointer',
+    '&:hover': {
+      color: '#1f1480',
+      textDecoration: 'underline'
+    }
   },
   barContainer: {
     display: 'flex',

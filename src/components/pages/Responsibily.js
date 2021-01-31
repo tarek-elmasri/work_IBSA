@@ -2,7 +2,7 @@ import React from 'react'
 
 function Responsibily() {
   return (
-    <div>
+    <div style={{height: 700}}>
       Responsibility Page !
     </div>
   )
