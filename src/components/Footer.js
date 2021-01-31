@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Typography } from '@material-ui/core'
+import { Grid, IconButton, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -48,7 +48,7 @@ function Footer() {
             </div>
             <div>
               <Typography variant='h6' style={{color: 'white'}}>About Us</Typography>
-              <Typography variant='body1' style={{color: 'gray' , marginTop: 10}}>
+              <Typography variant='body2' style={{color: 'gray' , marginTop: 10}}>
                 IBSA Regional Office Gulf area (IROGA) is a saudi scientific office for IBSA institue biochemiqu located in Ligano Switherland.
                 IROGA main office is based in Riyadh-SA, and runs operations in Saudi Arabia, Iraq, Kuwait and UAE.
               </Typography>
@@ -83,10 +83,19 @@ function Footer() {
 
         <Grid item xs={12}>
           <div style={{display: 'flex' , justifyContent: 'center', margin: 15}}>
-            <FacebookIcon fontSize='large' style={{marginRight: 15,cursor: 'pointer', color: 'white'}} />
-            <TwitterIcon fontSize='large' style={{margin: '0 15px',cursor: 'pointer', color: 'white'}} />
-            <LinkedInIcon fontSize='large' style={{margin: '0 15px',cursor: 'pointer', color: 'white'}} />
-            <InstagramIcon fontSize='large' style={{margin: '0 15px',cursor: 'pointer', color: 'white'}} />
+            <IconButton  style={{marginRight: 15,cursor: 'pointer'}}>
+              <FacebookIcon fontSize='large' style={{color: 'white'}}  />
+            </IconButton>
+            <IconButton  style={{marginRight: 15,cursor: 'pointer'}}>
+              <TwitterIcon fontSize='large' style={{color: 'white'}}  />
+            </IconButton>
+            <IconButton  style={{marginRight: 15,cursor: 'pointer'}}>
+              <LinkedInIcon fontSize='large' style={{color: 'white'}}  />
+            </IconButton>
+            <IconButton  style={{cursor: 'pointer'}}>
+              <InstagramIcon fontSize='large' style={{color: 'white'}} />
+            </IconButton>
+            
           </div>
           <div style={{textAlign:'center', color: 'gray'}}>
             <Typography variant='caption'>COPYRIGHT &copy; 2021 IROGA. ALL RIGHT RESERVED.</Typography>

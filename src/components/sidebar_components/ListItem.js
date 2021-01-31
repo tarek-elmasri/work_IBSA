@@ -35,6 +35,7 @@ function ListItem({ icon=null, title="", expanded=false,navbar=false,onClick=()=
           setExpandState(!expandState);
           href && history.push(href);
           onClick();
+          
           }}
           {...others}
         >

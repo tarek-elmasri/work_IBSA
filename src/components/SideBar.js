@@ -27,16 +27,16 @@ function SideBar({toggler}) {
   const classes=useStyles();
 
   return (
-    <div className={classes.root} onClick={toggler(false)}>
-      <ListItem button title={<ArrowBackIcon fontSize='small' />} />
-      <ListItem button title='Home' href='/' />
-      <ListItem button title='People' />
-      <ListItem button title='Innovation' href='/research' />
-      <ListItem button title='Quality' />
-      <ListItem button title='Reponsibility' />
-      <ListItem button title='PharmacoVigilance' />
+    <div className={classes.root}>
+      <ListItem button title={<ArrowBackIcon fontSize='small' />} onClick={toggler(false)} />
+      <ListItem button title='Home' href='/' onClick={toggler(false)} />
+      <ListItem button title='People' onClick={toggler(false)} />
+      <ListItem button title='Innovation' href='/research' onClick={toggler(false)} />
+      <ListItem button title='Quality' onClick={toggler(false)} />
+      <ListItem button title='Reponsibility'onClick={toggler(false)} />
+      <ListItem button title='PharmacoVigilance' onClick={toggler(false)} />
       <ListItem button title='Therabuetic Areas' expanded collapseItems={
-        <ListItem button title='Test' className={classes.subItem}  />
+        <ListItem button title='Test' onClick={toggler(false)} className={classes.subItem}  />
       }
       />
       
