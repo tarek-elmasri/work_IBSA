@@ -13,20 +13,20 @@ const useStyles= makeStyles(theme => ({
   },
   carouselImg: {
     width: '100%',
+    maxHeight: 650
   }
 }))
 function Home() {
   const classes= useStyles();
   const theme = useTheme()
   const isMobile= useMediaQuery(theme.breakpoints.down('sm'));
-  console.log('ismobile: ', isMobile)
   return (
     <div>
       <div style={{position: 'relative'}}>
-        <Carousel navButtonsAlwaysVisible={isMobile? false : true} >
-          <img src={img1} alt='' className={classes.carouselImg} />
-          <img src={img2} alt='' className={classes.carouselImg} />
-          <img src={img3} alt='' className={classes.carouselImg} />
+        <Carousel navButtonsAlwaysVisible={isMobile? false : true} animation='slide' >
+          <img src={img1} alt='' className={classes.carouselImg}  />
+          <img src={img2} alt='' className={classes.carouselImg}  />
+          <img src={img3} alt='' className={classes.carouselImg}  />
         </Carousel>
       </div>
       <div>
