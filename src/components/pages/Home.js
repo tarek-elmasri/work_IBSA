@@ -20,13 +20,16 @@ function Home() {
   const classes= useStyles();
   const theme = useTheme()
   const isMobile= useMediaQuery(theme.breakpoints.down('sm'));
+  const pic1 = img1
+  const pic2 = img2
+  const pic3= img3
   return (
     <div>
       <div style={{position: 'relative'}}>
         <Carousel navButtonsAlwaysVisible={isMobile? false : true} animation='slide' >
-          <img src={img1} alt='' className={classes.carouselImg}  />
-          <img src={img2} alt='' className={classes.carouselImg}  />
-          <img src={img3} alt='' className={classes.carouselImg}  />
+          <img src={pic1} alt='' className={classes.carouselImg}  />
+          <img src={pic2} alt='' className={classes.carouselImg}  />
+          <img src={pic3} alt='' className={classes.carouselImg}  />
         </Carousel>
       </div>
       <div>
