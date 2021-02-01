@@ -26,7 +26,7 @@ function Home() {
   return (
     <div>
       <div style={{position: 'relative'}}>
-        <Carousel navButtonsAlwaysVisible={isMobile? false : true} animation='slide' >
+        <Carousel navButtonsAlwaysVisible={isMobile? false : true} animation='slide'  timeout={{ enter: 500 , exit: 500}} >
           <img src={pic1} alt='' className={classes.carouselImg}  />
           <img src={pic2} alt='' className={classes.carouselImg}  />
           <img src={pic3} alt='' className={classes.carouselImg}  />
