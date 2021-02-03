@@ -1,7 +1,9 @@
-import { makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
+import { Grid, makeStyles, Typography, useMediaQuery, useTheme } from '@material-ui/core'
 import React from 'react'
 import headerImg from '../../assets/header.jpg'
-
+import CenterFocusStrongIcon from '@material-ui/icons/CenterFocusStrong';
+import EventIcon from '@material-ui/icons/Event';
+import SubHeader from '../home_components/SubHeader';
 
 const useStyles= makeStyles(theme => ({
   root: {
@@ -10,7 +12,8 @@ const useStyles= makeStyles(theme => ({
   },
   headerImg: {
     width: '100%',
-    maxHeight: 650
+    minHeight: 250,
+    maxHeight: 725  
   },
   headerContent: {
     position: 'absolute',
@@ -19,7 +22,19 @@ const useStyles= makeStyles(theme => ({
     backgroundColor: 'rgba(38, 20, 128,.8)',
     color: 'white',
     padding: theme.spacing(2),
-    background: 'lightblue'
+    background: 'lightblue',
+    [theme.breakpoints.up('sm')]:{
+      padding: theme.spacing(4)
+    }
+  },
+
+  subHeader: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: `30px 0px`,
+
   }
 }))
 function Home() {
@@ -32,11 +47,28 @@ function Home() {
       <div style={{position: 'relative'}}>
         <img src={headerImg} alt="" className={classes.headerImg}/>
         <div className={classes.headerContent}>
-          <Typography style={{fontSize: isMobile ? '.8rem' : '2rem'}}>IBSA Regional Office</Typography>
-          <Typography style={{fontSize: isMobile ? '.8rem' : '2rem'}} gutterBottom>Gulf Area</Typography>
-          <Typography style={{fontSize: isMobile ? '.5rem' : '1rem'}}>Connecting People</Typography>
+          <Typography style={{fontSize: isMobile ? '1rem' : '2rem'}}>IBSA Regional Office</Typography>
+          <Typography style={{fontSize: isMobile ? '1rem' : '2rem'}} gutterBottom>Gulf Area</Typography>
+          <Typography style={{fontSize: isMobile ? '.8rem' : '1rem'}}>Connecting People</Typography>
         </div>
       </div>
+
+      <Grid container style={{padding: `0 60px`}}>
+        <Grid item xs={12} md={6}>
+          <SubHeader 
+            icon={<CenterFocusStrongIcon fontSize='large' />}
+            title='SOCIAL RESPONSIBILITY'
+            body='IBSA supports the rehabilitation centers with sterilizers produced by the company'
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <SubHeader 
+            icon={<EventIcon fontSize='large' />}
+            title='IBSA EVENTS CALENDER'
+            body='IBSA Provide contineous online events and updates in different therapuetic areas'
+          />
+        </Grid>
+      </Grid>
     </div>
   )
 }
