@@ -9,9 +9,8 @@ const useStyles=makeStyles(theme => ({
     borderRadius: 0,
     height: 40,
     width: 120,
-    '&:hover': {
-      backgroundColor: '#373737',
-
+    "&:hover": {
+      backgroundColor: 'white',
     }
   }
 }))
@@ -19,7 +18,7 @@ function Button({...props}) {
   const classes=useStyles();
 
   return (
-    <MuiButton className={classes.root} classes={{root: { transition: 'none'}}}  {...props}>
+    <MuiButton className={classes.root} {...props}>
       
     </MuiButton>
   )

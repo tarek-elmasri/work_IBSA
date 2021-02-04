@@ -22,11 +22,12 @@ const useStyles= makeStyles(theme => ({
     margin: '15px 0',
     [theme.breakpoints.up('md')]:{
       flexDirection: 'row',
-      alignItems: 'center'
     }
   },
   contactContainer: {
-
+    display: 'flex',
+    flexDirection:'column',
+    margin: '13px 0',
   }
 }))
 function Footer() {
@@ -56,7 +57,7 @@ function Footer() {
           </div>
         </Grid >
 
-        <Grid item xs={12} md={4} style={{margin: '15px 0'}}>
+        <Grid item xs={12} md={4} className={classes.contactContainer}>
           <Typography variant='h6' style={{color: 'white'}}>Contact Us</Typography>
           
           <div style={{display: 'flex' , color: 'gray',marginTop: 10}}>

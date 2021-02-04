@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <div style={{background:'gray'}}>
+      <div style={{background:'white'}}>
         <Navbar />
         <Switch>
           <Route exact path='/research' component={Research} />

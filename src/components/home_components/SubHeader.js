@@ -14,23 +14,37 @@ const useStyles=makeStyles(theme => ({
     width: '100px',
     height: '100px',
     marginBottom: '30px',
+    border: '2px solid #1f1480',
     backgroundColor: '#37373737',
-    color: 'white'
+    color: 'black'
   },
   avatarHover: {
     width: '100px',
     height: '100px',
     marginBottom: '30px',
-    backgroundColor: 'black',
+    border: '2px solid #1f1480',
+    backgroundColor: '#1f1480',
     color: 'white'
   },
   btn: {
-    backgroundColor: 'black',
-    color:'white'
+    color:'black',
+    backgroundColor: '#37373737',
+    border: '2px solid #1f1480',
+    borderRadius: 0,
+    height: 40,
+    width: 120,
+    transition:'background-color 0s'
   },
   btnHover: {
-    backgroundColor: '#37373737',
-    color: 'white'
+    backgroundColor: '#1f1480',
+    border: '2px solid #1f1480',
+    color: 'white',
+    borderRadius: 0,
+    height: 40,
+    width: 120,
+    "&:hover": {
+      backgroundColor: 'rgb(50, 40, 148)',
+    },
   }
 }))
 
@@ -43,20 +57,20 @@ function SubHeader({icon=null , title='' , body=''}) {
     setHover(value)
   }
   return (
-    <div className={classes.root} onMouseEnter={()=> toggleHover(true)} onMouseLeave={()=> toggleHover(false)}>
+    <div className={classes.root} onMouseMove={()=> toggleHover(true)} onMouseOut={()=> toggleHover(false)}>
       <Avatar className={hover ? classes.avatarHover : classes.avatar}>
         {icon}
       </Avatar>
 
-      <Typography variant='h6' gutterBottom>{title}</Typography>
+      <Typography variant='subtitle2' gutterBottom>{title}</Typography>
 
-      <Divider gutterBottom flexItem variant='middle' style={{ height: '1px'}} />
+      <Divider flexItem variant='middle' style={{ height: '1px'}} />
 
       <Typography variant='body1' style={{marginTop: '20px'}}>
         {body}
       </Typography>
 
-      <Button className={hover? classes.btn : classes.btnHover} style={{marginTop: '30px'}}>read more</Button>
+      <Button className={hover? classes.btnHover : classes.btn} style={{marginTop: '30px'}}>read more</Button>
     </div>
   )
 }
