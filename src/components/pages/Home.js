@@ -77,17 +77,17 @@ function Home() {
       </Grid>
 
       <div style={{backgroundColor: '#2f2f2f2f', width: '100%' , display: 'flex', justifyContent:'center'}}>
-        <div style={{width: '80%' , padding: 40, display: 'flex' , justifyContent: 'center'}}>
-          <img style={{display: isMobile ? 'none' : 'inline'}}
+        <div style={{width: isMobile ? '100%' : '90%',padding: '40px 0', display: 'flex' , justifyContent: 'center'}}>
+          <img style={{display: isMobile ? 'none' : "inline"}}
             src='http://www.spimaco.com.sa/img/uploads/img08.png'
             alt=''
           />
-          <div style={{padding: 35}}>
+          <div style={{paddingTop: 35,paddingLeft:35 , paddingRight: 25}}>
             <Typography variant='h4' gutterBottom>Manufacturing Execelence</Typography>
             <HomeBlock 
               icon={<TelegramIcon fontSize='large' />} 
               title='QUALITY IN IBSA'
-              body='SPIMACO ADDWAEIH recognizes its responsibility towards meeting customer 
+              body='IBSA recognizes its responsibility towards meeting customer 
               requirements and satisfaction by applying quality criteria in all business
               aspects within the organization. Furthermore, SPIMACO 
               has developed and sustained a strong position in Sa.
